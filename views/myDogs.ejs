@@ -1,0 +1,55 @@
+<%- include('partials/header') %>
+<title>Paw Haven 🐾 | <%= title %></title>
+
+<%- include('partials/navbar') %>
+
+<div class="main-content">
+    <h2>My Dogs</h2>
+
+    <% if (dogs && dogs.length > 0) { %>
+
+        <% dogs.forEach(dog => { %>
+            <div class="dog-card">
+                <h3><%= dog.dog_name %></h3>
+                <p><%= dog.description %></p>
+                <p><%= dog.adopted ? "Adopted" : "Not adopted" %></p>
+                <a class="delete" data-doc="<%= dog._id %>">
+                    <svg class="trash-icon" width="20" height="20" viewBox="0 0 24 24" fill="black" >
+                        <path d="M3 6h18v2H3V6zm2 3h14l-1 12H6L5 9zm5-5h4l1 1h5v2H4V5h5l1-1z"/>
+                    </svg>
+                </a>
+            </div>
+        <% }) %>
+
+    <% } else { %>
+
+        <p>No dogs to display</p>
+
+    <% } %>
+</div>
+<script>
+    document.querySelectorAll('.delete').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+        const id = btn.dataset.doc;
+
+        try {
+            const res = await fetch(`/dog/myDogs/${id}`, {
+                method: 'DELETE'
+            });
+            const data = await res.json();
+            if (res.ok) { //success 200
+                alert(data.message);
+            }else{
+                alert(data.error
+                    
+                );
+            }
+            window.location.href = '/dog/myDogs';
+        } catch (err) {
+        console.log(err);
+        }
+    });
+    });
+</script>
+
+<%- include('partials/footer') %>

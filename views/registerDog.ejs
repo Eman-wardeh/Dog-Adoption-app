@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<title>Paw Haven 🐾 | <%= title %></title>
+
+<%- include('partials/navbar') %>
+
+<div class="main-content">
+    <h2>Register a Dog</h2>
+    <form action="/dog/register" method="POST">
+        <% if (user) { %>
+            <h3>The owner: <%= user.name %></h3>
+        <% } %>
+        <label for="dog_name">Dog Name:</label>
+        <input type="text" id="dog_name" name="dog_name" required>
+        
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+        <button  type="submit">Register Dog</button>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

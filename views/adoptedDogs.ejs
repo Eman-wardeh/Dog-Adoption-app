@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+<title>Paw Haven 🐾 | <%= title %></title>
+
+<%- include('partials/navbar') %>
+
+<div class="main-content">
+    <h2>Adopted Dogs</h2>
+
+    <% if (dogs && dogs.length > 0) { %>
+
+        <% dogs.forEach(dog => { %>
+            <div class="dog-card">
+                <h3><%= dog.dog_name %></h3>
+                <p><%= dog.description %></p>
+                <p>Adopted: <%= dog.adopted  %></p>
+                
+            </div>
+        <% }) %>
+
+    <% } else { %>
+
+        <p>No dogs to display</p>
+
+    <% } %>
+</div>
+
+<%- include('partials/footer') %>

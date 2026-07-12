@@ -1,0 +1,93 @@
+/* Navbar layout */
+h1 a{
+  text-decoration: none;
+  color: brown;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #a21f1f;
+  padding-bottom: 25px;
+}
+
+/* UL becomes flex container */
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* spacing between items */
+nav li {
+  margin: 0 10px;
+}
+
+
+.right {
+  margin-left: auto;
+}
+
+/* remove default link style */
+nav a {
+  text-decoration: none;
+  color: rgb(121, 9, 9);
+}
+
+/* optional button style */
+.signup-btn {
+  background: #ffcc00;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+.main-content{
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(121, 9, 9);
+}
+form input,  form textarea{
+  display: block;
+  margin: 10px auto;
+  color:#a21f1f;
+  border: 1px solid #ffcc00;
+}
+form textarea{
+  width: 300px;
+  height: 100px;
+}
+form label{
+  display: block;
+  font-size: 18px;
+  margin: 10px auto;
+  color:#a21f1f;
+}
+button{
+  background:#a44d4d;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: wheat;
+}
+.trash-icon {
+  width: 20px;
+  height: 20px;
+  fill: #a21f1f;
+  cursor: pointer;
+}
+.dog-card {
+  border: 1px solid #a21f1f;
+  padding: 15px;
+  margin: 15px auto;
+  width: 800px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer{
+  color: #a21f1f;
+  text-align: center;
+  padding: 20px;
+}

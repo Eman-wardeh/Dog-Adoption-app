@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+<title>Paw Haven 🐾 | <%= title %></title>
+
+<%- include('partials/navbar') %>
+
+<div class="main-content">
+    <h2>All Dogs</h2>
+
+    <% if (dogs && dogs.length > 0) { %>
+
+        <% dogs.forEach(dog => { %>
+            <div class="dog-card">
+                <h3><%= dog.dog_name %></h3>
+                <p><%= dog.description %></p>
+                <p> <%= dog.adopted ? "adopted" : "available" %></p>
+                <!-- <a></a>contains a get requist, but we'll use a form for POST -->
+                <% if (!dog.adopted) { %>
+                    <form action="/dog/adopt/<%= dog._id %>" method="POST">
+                        <button type="submit">🐾 Adopt Me</button>
+                    </form>
+                <% } %>
+            </div>
+        <% }) %>
+
+    <% } else { %>
+
+        <p>No dogs to display</p>
+
+    <% } %>
+</div>
+
+<%- include('partials/footer') %>
