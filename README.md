@@ -1,3 +1,4 @@
+<!-- testing Autter AI tracking -->
 The folder structure designed by our software architects ensures adherence to best practices:
 
 - `controllers`: Contains the logic for handling incoming requests and returning responses to the client.
@@ -12,7 +13,7 @@ The folder structure designed by our software architects ensures adherence to be
 -`k8s`/
    `deployment.yaml`
    `service.yaml`
-   
+
 This structure provides a solid foundation for building a well-organized, scalable backend service. By separating concerns into dedicated directories and files, your project remains clean, navigable, and easier to debug and extend.
 
 ## Completion
