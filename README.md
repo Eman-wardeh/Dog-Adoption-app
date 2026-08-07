@@ -1,5 +1,7 @@
+<!-- Autter verification test. -->
+<!-- autter test in readmefile -->
+<!-- testing comment -->
 <!-- testing Autter AI tracking2 -->
-<!-- testing Autter AI tracking -->
 The folder structure designed by our software architects ensures adherence to best practices:
 
 - `controllers`: Contains the logic for handling incoming requests and returning responses to the client.
@@ -44,6 +46,7 @@ This structure provides a solid foundation for building a well-organized, scalab
 - **Testing:** Mocha, Chai, Chai HTTP
 - **Development:** Nodemon, Cross-Env
 - **Version Control:** Git, GitHub
+- **AI Assistant:** Autter (used during development)
 
 ## ✨ Features
 
@@ -130,5 +133,8 @@ Docker Container
 ```
 
 
+## Autter Test
+
+This project uses AI-assisted development. Some edits, comments, and minor modifications were made with the assistance of AI tools to speed up development and testing; all changes were reviewed and approved by the project maintainer.
 
 View the rubric for this assessment [here](https://storage.googleapis.com/hatchways.appspot.com/employers/springboard/student_rubrics/Dog%20Adoption%20Platform%20Rubric.pdf)
