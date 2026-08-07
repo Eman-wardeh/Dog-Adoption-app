@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: dog-api
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: dog-api
+
+  template:
+    metadata:
+      labels:
+        app: dog-api
+
+    spec:
+      containers:
+      - name: dog-api
+        image: dog-api:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
